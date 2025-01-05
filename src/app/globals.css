@@ -3,12 +3,10 @@
 @tailwind utilities;
 
 :root {
-  :root {
-    --background: hsl(0, 0% 100%);
-    --foreground: hsl(0, 0%, 19%);
-    --secondary: hsl(0 0% 35%);
-    --primary: hsl(359, 89%, 32%);
-  }
+  --background: hsl(0, 0% 100%);
+  --foreground: hsl(0, 0%, 19%);
+  --secondary: hsl(0 0% 35%);
+  --primary: hsl(359, 89%, 32%);
 }
 
 /* TODO: Add color scheme for dark mode */
