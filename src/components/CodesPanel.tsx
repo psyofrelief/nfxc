@@ -12,7 +12,8 @@ export default function CodesPanel() {
         >
           <a
             href={`https://www.netflix.com/browse/genre/${item.code}`}
-            className="text-sm lg:text-md font-semibold uppercase h-fit hover:underline transition-all"
+            className="text-sm lg:text-md font-semibold uppercase h-fit hover:underline"
+            aria-label={`Visit Netflix genre ${item.category}`}
           >
             {item.category}{" "}
             <span className="text-primary font-normal">{item.code}</span>
@@ -22,6 +23,7 @@ export default function CodesPanel() {
               <a
                 href={`https://www.netflix.com/browse/genre/${itm.code}`}
                 key={itm.code}
+                aria-label={`Visit Netflix genre ${item.category}`}
                 className="flex justify-between items-center hover:underline hover:text-secondary"
               >
                 {itm.name}

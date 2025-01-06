@@ -30,13 +30,15 @@ export default function Footer() {
       </a>
       <div className="flex gap-sm items-center">
         <a
-          href="https://github.com/psyofrelief"
+          href="https://github.com/psyofrelief/nfxc"
+          aria-label="View Github source code"
           className="hover:text-primary transition-colors"
         >
           {"// GITHUB"}
         </a>
         <a
           href="https://www.linkedin.com/in/faried-idris"
+          aria-label="View Faried Idris' LinkedIn profile"
           className="hover:text-primary transition-colors"
         >
           {"// LINKEDIN"}

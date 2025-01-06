@@ -2,30 +2,31 @@
 import CodesPanel from "@/components/CodesPanel";
 import Sidebar from "@/components/Sidebar";
 import ProgressBar from "@/components/ProgressBar";
+import TextFade from "@/components/TextFade";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       <ProgressBar />
 
-      <h1 className="text-md sm:text-[10.5vw] whitespace-nowrap font-semibold mb-sm mt-md  leading-none">
-        NETFLIX CODES
-      </h1>
-      <p>
-        Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Tempore,
-        rerum omnis, illo porro consequatur possimus, ea veritatis earum
-        aperiam, et eligendi fuga. An there was, harum. Repudiandae quam illo
-        ipsum ipsa sunt. Voluptates consectetur adipisci assumenda tempora earum
-        veniam? Mollitia soluta ipsam animi unde commodi vero necessitatibus
-        nulla libero praesentium perspiciatis magnam, iste eaque quidem,
-        reprehenderit dolorem quod labore omnis placeat quas?
-      </p>
-      <div className="flex mt-md">
-        <div className="hidden xl:block">
-          <Sidebar />
+      <TextFade direction="down">
+        <h1 className="text-md sm:text-[10.5vw] whitespace-nowrap font-semibold mb-sm mt-md  leading-none">
+          NETFLIX CODES
+        </h1>
+        <p>
+          Use these carefully chosen secret codes to find a more intelligent way
+          to use Netflix. You can explore everything from cult classics to niche
+          favourites. NFXC_ is your shortcut to obscure genres and
+          difficult-to-find categories. Simply click a code to get right into
+          the stuff you enjoy, eliminating the need for endless surfing.
+        </p>
+        <div className="flex mt-lg">
+          <div className="hidden xl:block">
+            <Sidebar />
+          </div>
+          <CodesPanel />
         </div>
-        <CodesPanel />
-      </div>
+      </TextFade>
     </div>
   );
 }

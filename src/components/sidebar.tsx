@@ -30,6 +30,7 @@ export default function Sidebar() {
         <a
           href={`#${category.toLowerCase()}`}
           key={category}
+          aria-label={`Visit Netflix genre ${category}`}
           className="hover:font-semibold hover:text-foreground transition-colors w-full"
         >
           {category}

@@ -8,7 +8,6 @@ export interface NetflixCategory {
   code: number;
   subcategories: Subcategory[];
 }
-// Extracting the main categories dynamically from the netflixCodes array
 
 export const netflixCodes: NetflixCategory[] = [
   {
@@ -189,19 +188,7 @@ export const netflixCodes: NetflixCategory[] = [
       { name: "Movies Based on Children's Books", code: 10056 },
     ],
   },
-  {
-    category: "LGBTQ Movies",
-    code: 5977,
-    subcategories: [
-      { name: "LGBTQ Comedies", code: 7120 },
-      { name: "LGBTQ Directors", code: 81288351 },
-      { name: "LGBTQ Documentaries", code: 4720 },
-      { name: "LGBTQ Dramas", code: 500 },
-      { name: "LGBTQ Stories", code: 100010 },
-      { name: "LGBTQ Stories for Families", code: 81290117 },
-      { name: "Romantic LGBTQ Movies", code: 3329 },
-    ],
-  },
+
   {
     category: "Music",
     code: 1701,
@@ -287,7 +274,6 @@ export const netflixCodes: NetflixCategory[] = [
       { name: "International TV Shows", code: 1195213 },
       { name: "Kids' TV", code: 27346 },
       { name: "Korean TV Shows", code: 67879 },
-      { name: "LGBTQ TV Shows", code: 65263 },
       { name: "Military TV Shows", code: 25804 },
       { name: "Miniseries", code: 4814 },
       { name: "Reality TV", code: 9833 },

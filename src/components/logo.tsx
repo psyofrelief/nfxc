@@ -7,7 +7,8 @@ export default function Logo({ className = "" }: Params) {
   return (
     <Link
       href={"/"}
-      className={`font-semibold hover:text-primary transition-colors ${className}`}
+      aria-label="Visit home page"
+      className={`font-semibold text-foreground hover:text-primary transition-colors ${className}`}
     >
       NFXC_
     </Link>
