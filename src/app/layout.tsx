@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "NFXC_",
@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="flex flex-col min-h-screen px-lg">
+      <body className="flex flex-col min-h-screen px-lg ">
         <Navbar />
         {children}
       </body>
