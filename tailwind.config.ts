@@ -13,6 +13,7 @@ export default {
         foreground: "var(--foreground)",
         secondary: "var(--secondary)",
         primary: "var(--primary)",
+        outline: "var(--outline)",
       },
       spacing: {
         xs: "8px",

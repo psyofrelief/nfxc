@@ -6,6 +6,7 @@
   --background: hsl(0 0% 100%);
   --foreground: hsl(0 0%, 19%);
   --secondary: hsl(0 0% 35%);
+  --outline: hsl(0 0% 75%);
   --primary: hsl(359 89%, 32%);
 }
 

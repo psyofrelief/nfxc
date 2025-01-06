@@ -1,9 +1,15 @@
+"use client";
 import CodesPanel from "@/components/CodesPanel";
 import Sidebar from "@/components/Sidebar";
+import ProgressBar from "@/components/ProgressBar";
+
+import { useState } from "react";
 
 export default function Home() {
   return (
-    <div className="min-h-screen mt-[57px] relative">
+    <div className="min-h-screen">
+      <ProgressBar />
+
       <h1 className="text-[9rem] font-semibold">NETFLIX CODES</h1>
       <p>
         Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Tempore,
@@ -14,10 +20,10 @@ export default function Home() {
         nulla libero praesentium perspiciatis magnam, iste eaque quidem,
         reprehenderit dolorem quod labore omnis placeat quas?
       </p>
-      <section className="flex gap-lg mt-md relative">
+      <div className="flex mt-md">
         <Sidebar />
         <CodesPanel />
-      </section>
+      </div>
     </div>
   );
 }

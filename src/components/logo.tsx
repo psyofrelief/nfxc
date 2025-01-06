@@ -1,8 +1,14 @@
 import Link from "next/link";
 
-export default function Logo() {
+interface Params {
+  className?: string;
+}
+export default function Logo({ className = "" }: Params) {
   return (
-    <Link href={"/"} className="font-semibold">
+    <Link
+      href={"/"}
+      className={`font-semibold hover:text-primary transition-colors ${className}`}
+    >
       NFXC_
     </Link>
   );

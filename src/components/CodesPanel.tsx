@@ -1,42 +1,37 @@
-"use client";
 import { netflixCodes } from "@/data/netflix-codes";
-import SearchInput from "./SearchInput";
-import { useEffect, useState } from "react";
-
-export interface Subcategory {
-  name: string;
-  code: number;
-}
-
-export interface NetflixCategory {
-  category: string;
-  code: number;
-  subcategories: Subcategory[];
-}
+import Footer from "./Footer";
 
 export default function CodesPanel() {
-  const [codes, setCodes] = useState(netflixCodes);
   return (
-    <div className="flex-1 flex flex-col gap-md">
-      {netflixCodes.map((code) => (
-        <div key={Math.random()} className="flex justify-end gap-md ">
-          <p className="text-md font-semibold uppercase">
-            {code.category}{" "}
-            <span className="text-primary font-normal ">{code.code}</span>
-          </p>
-          <ul className="flex flex-col flex-1 max-w-[400px]">
-            {code.subcategories.map((item) => (
-              <li
-                key={Math.random()}
-                className="flex justify-between items-center"
+    <div className="flex-1 flex flex-col gap-md py-sm">
+      {netflixCodes.map((item) => (
+        <div
+          key={Math.random()}
+          id={item.category.toLowerCase()} // Add unique id for each category
+          className="flex justify-end gap-md"
+        >
+          <a
+            href={`https://www.netflix.com/browse/genre/${item.code}`}
+            className="text-md font-semibold uppercase h-fit hover:underline transition-all"
+          >
+            {item.category}{" "}
+            <span className="text-primary font-normal">{item.code}</span>
+          </a>
+          <div className="flex flex-col flex-1 max-w-[400px]">
+            {item.subcategories.map((itm) => (
+              <a
+                href={`https://www.netflix.com/browse/genre/${itm.code}`}
+                key={itm.code}
+                className="flex justify-between items-center hover:underline hover:text-secondary"
               >
-                {item.name}
-                <span className="text-primary">{item.code}</span>
-              </li>
+                {itm.name}
+                <span className="text-primary">{itm.code}</span>
+              </a>
             ))}
-          </ul>
+          </div>
         </div>
       ))}
+      <Footer />
     </div>
   );
 }
