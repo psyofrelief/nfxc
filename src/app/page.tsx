@@ -3,14 +3,14 @@ import CodesPanel from "@/components/CodesPanel";
 import Sidebar from "@/components/Sidebar";
 import ProgressBar from "@/components/ProgressBar";
 
-import { useState } from "react";
-
 export default function Home() {
   return (
     <div className="min-h-screen">
       <ProgressBar />
 
-      <h1 className="text-[9rem] font-semibold">NETFLIX CODES</h1>
+      <h1 className="text-md sm:text-[10.5vw] whitespace-nowrap font-semibold mb-sm mt-md  leading-none">
+        NETFLIX CODES
+      </h1>
       <p>
         Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Tempore,
         rerum omnis, illo porro consequatur possimus, ea veritatis earum
@@ -21,7 +21,9 @@ export default function Home() {
         reprehenderit dolorem quod labore omnis placeat quas?
       </p>
       <div className="flex mt-md">
-        <Sidebar />
+        <div className="hidden xl:block">
+          <Sidebar />
+        </div>
         <CodesPanel />
       </div>
     </div>

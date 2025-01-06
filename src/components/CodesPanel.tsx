@@ -8,16 +8,16 @@ export default function CodesPanel() {
         <div
           key={Math.random()}
           id={item.category.toLowerCase()} // Add unique id for each category
-          className="flex justify-end gap-md"
+          className="flex flex-col md:flex-row justify-between xl:justify-end gap-xs md:gap-md"
         >
           <a
             href={`https://www.netflix.com/browse/genre/${item.code}`}
-            className="text-md font-semibold uppercase h-fit hover:underline transition-all"
+            className="text-sm lg:text-md font-semibold uppercase h-fit hover:underline transition-all"
           >
             {item.category}{" "}
             <span className="text-primary font-normal">{item.code}</span>
           </a>
-          <div className="flex flex-col flex-1 max-w-[400px]">
+          <div className="flex flex-col flex-1  max-w-full md:max-w-[400px]">
             {item.subcategories.map((itm) => (
               <a
                 href={`https://www.netflix.com/browse/genre/${itm.code}`}

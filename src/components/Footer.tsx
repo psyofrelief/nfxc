@@ -23,20 +23,25 @@ export default function Footer() {
   }, []);
   return (
     <footer
-      className={`w-full flex justify-end gap-sm border-t-outline pt-sm ${isBottom && "border-t transition-colors"}`}
+      className={`w-full flex justify-between lg:justify-end gap-sm border-t-outline pt-sm ${isBottom && "border-t transition-colors"}`}
     >
-      <a
-        href="https://github.com/psyofrelief"
-        className="hover:text-secondary transition-colors"
-      >
-        {"// GITHUB"}
+      <a href="#navbar" className="block lg:hidden font-semibold">
+        BACK TO TOP ^
       </a>
-      <a
-        href="https://www.linkedin.com/in/faried-idris"
-        className="hover:text-secondary transition-colors"
-      >
-        {"// LINKEDIN"}
-      </a>
+      <div className="flex gap-sm items-center">
+        <a
+          href="https://github.com/psyofrelief"
+          className="hover:text-primary transition-colors"
+        >
+          {"// GITHUB"}
+        </a>
+        <a
+          href="https://www.linkedin.com/in/faried-idris"
+          className="hover:text-primary transition-colors"
+        >
+          {"// LINKEDIN"}
+        </a>
+      </div>
     </footer>
   );
 }
