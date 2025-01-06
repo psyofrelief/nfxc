@@ -1,3 +1,4 @@
+import CodesPanel from "@/components/CodesPanel";
 import Sidebar from "@/components/sidebar";
 
 export default function Home() {
@@ -13,8 +14,9 @@ export default function Home() {
         nulla libero praesentium perspiciatis magnam, iste eaque quidem,
         reprehenderit dolorem quod labore omnis placeat quas?
       </p>
-      <section>
+      <section className="flex gap-md mt-md">
         <Sidebar />
+        <CodesPanel />
       </section>
     </div>
   );

@@ -17,8 +17,8 @@ export default {
       spacing: {
         xs: "8px",
         sm: "16px",
-        lg: "40px",
-        xl: "60px",
+        md: "40px",
+        lg: "80px",
       },
       fontSize: {
         sm: "16px",
