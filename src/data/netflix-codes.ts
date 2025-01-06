@@ -8,6 +8,7 @@ export interface NetflixCategory {
   code: number;
   subcategories: Subcategory[];
 }
+// Extracting the main categories dynamically from the netflixCodes array
 
 export const netflixCodes: NetflixCategory[] = [
   {
@@ -302,3 +303,8 @@ export const netflixCodes: NetflixCategory[] = [
     ],
   },
 ];
+
+// Extracting the main categories dynamically from the netflixCodes array
+export const categories: string[] = netflixCodes.map(
+  (category) => category.category,
+);

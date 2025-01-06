@@ -1,3 +1,5 @@
+import Sidebar from "@/components/sidebar";
+
 export default function Home() {
   return (
     <div className="min-h-screen">
@@ -11,6 +13,9 @@ export default function Home() {
         nulla libero praesentium perspiciatis magnam, iste eaque quidem,
         reprehenderit dolorem quod labore omnis placeat quas?
       </p>
+      <section>
+        <Sidebar />
+      </section>
     </div>
   );
 }
