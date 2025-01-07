@@ -1,7 +1,7 @@
 "use client";
 import CodesPanel from "@/components/CodesPanel";
-import Sidebar from "@/components/Sidebar";
 import ProgressBar from "@/components/ProgressBar";
+import Sidebar from "@/components/Sidebar";
 import TextFade from "@/components/TextFade";
 
 export default function Home() {

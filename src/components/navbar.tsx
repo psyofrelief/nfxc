@@ -1,5 +1,5 @@
-import Logo from "./Logo";
 import DarkModeToggle from "./DarkModeToggle";
+import Logo from "./Logo";
 
 export default function Navbar() {
   return (
