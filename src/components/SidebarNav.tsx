@@ -1,8 +1,8 @@
 import { categories } from "@/data/netflix-codes";
-import Logo from "./Logo";
 import { useState, useEffect } from "react";
+import MainLogo from "./MainLogo";
 
-export default function Sidebar() {
+export default function SidebarNav() {
   const [isBottom, setIsBottom] = useState(false);
 
   const checkIfBottom = () => {
@@ -39,7 +39,7 @@ export default function Sidebar() {
       <div
         className={`mt-auto border-t-outline pt-sm w-full ${isBottom && "border-t transition-all"}`}
       >
-        <Logo />
+        <MainLogo />
       </div>
     </div>
   );

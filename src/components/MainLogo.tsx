@@ -3,7 +3,7 @@ import Link from "next/link";
 interface Params {
   className?: string;
 }
-export default function Logo({ className = "" }: Params) {
+export default function MainLogo({ className = "" }: Params) {
   return (
     <Link
       href={"/"}

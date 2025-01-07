@@ -1,7 +1,7 @@
 "use client";
 import CodesPanel from "@/components/CodesPanel";
 import ProgressBar from "@/components/ProgressBar";
-import Sidebar from "@/components/Sidebar";
+import SidebarNav from "@/components/SidebarNav";
 import TextFade from "@/components/TextFade";
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
         </p>
         <div className="flex mt-lg">
           <div className="hidden xl:block">
-            <Sidebar />
+            <SidebarNav />
           </div>
           <CodesPanel />
         </div>

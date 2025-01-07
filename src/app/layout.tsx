@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "NFXC_",
@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="flex flex-col min-h-screen px-md xl:px-lg transition-colors duration-100 ease-out">
-        <Navbar />
+        <Header />
         {children}
       </body>
     </html>
