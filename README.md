@@ -171,4 +171,4 @@ This project is private and solely maintained by me.
 # Credits
 
 Developed and designed by Faried Idris.
-For inquiries, visit my portfolio at [fariedd.vercel.app](https://faried.vercel.app) or connect via GitHub / LinkedIn.8px
+For inquiries, visit my portfolio at [fariedd.vercel.app](https://faried.vercel.app) or connect via GitHub / LinkedIn.
