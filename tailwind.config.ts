@@ -16,14 +16,14 @@ export default {
         outline: "var(--outline)",
       },
       spacing: {
-        xs: "8px",
-        sm: "16px",
-        md: "40px",
-        lg: "80px",
+        xs: "0.5rem",
+        sm: "1rem",
+        md: "2.5rem",
+        lg: "5rem",
       },
       fontSize: {
-        sm: "16px",
-        md: "24px",
+        sm: "1rem",
+        md: "1.5rem",
       },
       screens: {
         md: "786px",
