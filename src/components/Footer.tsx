@@ -23,7 +23,7 @@ export default function Footer() {
   }, []);
   return (
     <footer
-      className={`w-full flex justify-between lg:justify-end gap-sm border-t-outline pt-sm ${isBottom && "border-t transition-colors"}`}
+      className={`w-full text-xs sm:text-sm flex justify-between lg:justify-end gap-sm border-t-outline pt-sm ${isBottom && "border-t transition-colors"}`}
     >
       <a href="#navbar" className="block lg:hidden font-semibold">
         BACK TO TOP ^
