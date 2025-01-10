@@ -5,23 +5,16 @@ import MainLogo from "./MainLogo";
 export default function SidebarNav() {
   const [isBottom, setIsBottom] = useState(false);
 
-  const checkIfBottom = () => {
-    if (
-      window.innerHeight + window.scrollY >=
-      document.documentElement.scrollHeight
-    ) {
-      setIsBottom(true);
-    } else {
-      setIsBottom(false);
-    }
-  };
-
   useEffect(() => {
-    window.addEventListener("scroll", checkIfBottom);
-
-    return () => {
-      window.removeEventListener("scroll", checkIfBottom);
+    const checkIfBottom = () => {
+      setIsBottom(
+        window.innerHeight + window.scrollY >=
+          document.documentElement.scrollHeight,
+      );
     };
+
+    window.addEventListener("scroll", checkIfBottom);
+    return () => window.removeEventListener("scroll", checkIfBottom);
   }, []);
 
   return (
@@ -36,11 +29,9 @@ export default function SidebarNav() {
           {category}
         </a>
       ))}
-      <div
-        className={`mt-auto border-t-outline pt-sm w-full ${isBottom && "border-t transition-all"}`}
-      >
-        <MainLogo />
-      </div>
+      <MainLogo
+        className={`mt-auto border-t-outline pt-xs w-full ${isBottom && "border-t transition-all"}`}
+      />
     </div>
   );
 }

@@ -8,7 +8,7 @@ export default function MainLogo({ className = "" }: Params) {
     <Link
       href={"/"}
       aria-label="Visit home page"
-      className={`font-semibold text-foreground hover:text-primary transition-colors ${className}`}
+      className={`font-semibold h-fit text-foreground hover:text-primary transition-colors ${className}`}
     >
       NFXC_
     </Link>

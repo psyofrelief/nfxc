@@ -3,24 +3,18 @@ import { useEffect, useState } from "react";
 export default function Footer() {
   const [isBottom, setIsBottom] = useState(false);
 
-  const checkIfBottom = () => {
-    if (
-      window.innerHeight + window.scrollY >=
-      document.documentElement.scrollHeight
-    ) {
-      setIsBottom(true);
-    } else {
-      setIsBottom(false);
-    }
-  };
-
   useEffect(() => {
-    window.addEventListener("scroll", checkIfBottom);
-
-    return () => {
-      window.removeEventListener("scroll", checkIfBottom);
+    const checkIfBottom = () => {
+      setIsBottom(
+        window.innerHeight + window.scrollY >=
+          document.documentElement.scrollHeight,
+      );
     };
+
+    window.addEventListener("scroll", checkIfBottom);
+    return () => window.removeEventListener("scroll", checkIfBottom);
   }, []);
+
   return (
     <footer
       className={`w-full text-xs sm:text-sm flex justify-between lg:justify-end gap-sm border-t-outline pt-sm ${isBottom && "border-t transition-colors"}`}
@@ -34,14 +28,14 @@ export default function Footer() {
           aria-label="View Github source code"
           className="hover:text-primary transition-colors"
         >
-          {"// GITHUB"}
+          {"GITHUB_"}
         </a>
         <a
           href="https://www.linkedin.com/in/faried-idris"
           aria-label="View Faried Idris' LinkedIn profile"
           className="hover:text-primary transition-colors"
         >
-          {"// LINKEDIN"}
+          {"LINKEDIN_"}
         </a>
       </div>
     </footer>
