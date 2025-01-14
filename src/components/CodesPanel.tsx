@@ -7,7 +7,7 @@ export default function CodesPanel() {
       {netflixCodes.map((item) => (
         <div
           key={Math.random()}
-          id={item.category.toLowerCase()} // Add unique id for each category
+          id={item.category.toLowerCase()}
           className="flex flex-col md:flex-row justify-between xl:justify-end gap-xs md:gap-md"
         >
           <a

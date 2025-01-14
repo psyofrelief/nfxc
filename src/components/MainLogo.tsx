@@ -1,9 +1,10 @@
 import Link from "next/link";
 
-interface Params {
+interface Props {
   className?: string;
 }
-export default function MainLogo({ className = "" }: Params) {
+
+export default function MainLogo({ className = "" }: Props) {
   return (
     <Link
       href={"/"}
